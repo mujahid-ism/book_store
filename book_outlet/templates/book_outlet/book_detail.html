@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Book Detail
+{% endblock  %}
+
+{% block content %}
+  <h2>{{ book.title }} </h2>
+  <h3>{{ book.rating }}</h3>
+  <p>{{ book.author }}<p>
+  {% if book.is_bestselling %}
+    <p> This is best Selling Book </p>
+  {% else %}
+    <p> This is not best Selling Book </p>
+  {% endif %}
+{% endblock  %}
+
